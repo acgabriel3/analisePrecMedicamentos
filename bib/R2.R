@@ -27,7 +27,7 @@ R2 <- function(quali, quanti) {
     }
     
     somaVar <- somaVar + var(quanti[which(quali == fatores[i])], na.rm = TRUE)
-    print(somaVar)
+    
   }
   
   varMedio <- somaVar/length(quali)
