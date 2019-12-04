@@ -21,6 +21,7 @@ quartis <- list(quantile(as.numeric(precosMed$PF), probs = c(0, 0.25, 0.5, 0.75,
              quantile(as.numeric(precosMed$`PMC 0%`), probs = c(0, 0.25, 0.5, 0.75, 1),
                       na.rm = TRUE))
 
+iqrs <- c(IQR(precosMed$PF, na.rm = T), IQR(precosMed$`PMC 0%`, na.rm = T))
 ### Medidas de assimetria
 pearson <- c(3*(medias[1] - medianas[1])/ desvios_padrao[1],
              3*(medias[2] - medianas[2]) / desvios_padrao[2])
